@@ -1,0 +1,326 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TVB390_16VSB - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP12D.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D LOOP_ADAPT=1 /D "TVB390V8" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TVB390_16VSB.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\T380Demo_16VSB.c"
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\UTIL.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP12D.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP12E.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/hld_mod_16vsb.pdb" /debug /machine:I386 /out:"../../APPL/hld_mod_16vsb.exe" /pdbtype:sept 
+".\Debug\T380Demo_16VSB.obj"
+".\Debug\UTIL.obj"
+"..\..\APPL\TSPHLD0381.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP12E.tmp"
+<h3>Output Window</h3>
+Compiling...
+T380Demo_16VSB.c
+UTIL.c
+Linking...
+
+
+
+<h3>Results</h3>
+hld_mod_16vsb.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: TVB390_8VSB - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP130.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D LOOP_ADAPT=1 /D "TVB390V8" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TVB390_8VSB.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\T380Demo_VSB.c"
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\UTIL.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP130.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP131.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/hld_mod_8vsb.pdb" /debug /machine:I386 /out:"../../APPL/hld_mod_8vsb.exe" /pdbtype:sept 
+".\Debug\T380Demo_VSB.obj"
+".\Debug\UTIL.obj"
+"..\..\APPL\TSPHLD0381.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP131.tmp"
+<h3>Output Window</h3>
+Compiling...
+T380Demo_VSB.c
+UTIL.c
+Linking...
+
+
+
+<h3>Results</h3>
+hld_mod_8vsb.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: TVB390_DTMB - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP133.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D LOOP_ADAPT=1 /D "TVB390V8" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TVB390_DTMB.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\T380Demo_DTMB.c"
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\UTIL.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP133.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP134.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/hld_mod_dtmb.pdb" /debug /machine:I386 /out:"../../APPL/hld_mod_dtmb.exe" /pdbtype:sept 
+".\Debug\T380Demo_DTMB.obj"
+".\Debug\UTIL.obj"
+"..\..\APPL\TSPHLD0381.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP134.tmp"
+<h3>Output Window</h3>
+Compiling...
+T380Demo_DTMB.c
+UTIL.c
+Linking...
+
+
+
+<h3>Results</h3>
+hld_mod_dtmb.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: TVB390_DVB_H - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP136.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D LOOP_ADAPT=1 /D "TVB390V8" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TVB390_DVB_H.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\T380Demo_DVB_H.c"
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\UTIL.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP136.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP137.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/hld_mod_dvb_h.pdb" /debug /machine:I386 /out:"../../APPL/hld_mod_dvb_h.exe" /pdbtype:sept 
+".\Debug\T380Demo_DVB_H.obj"
+".\Debug\UTIL.obj"
+"..\..\APPL\TSPHLD0381.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP137.tmp"
+<h3>Output Window</h3>
+Compiling...
+T380Demo_DVB_H.c
+UTIL.c
+Linking...
+
+
+
+<h3>Results</h3>
+hld_mod_dvb_h.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: TVB390_DVB_S2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP139.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D LOOP_ADAPT=1 /D "TVB390V8" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TVB390_DVB_S2.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\T380Demo_DVB_S2.c"
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\UTIL.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP139.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13A.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/hld_mod_dvb_s2.pdb" /debug /machine:I386 /out:"../../APPL/hld_mod_dvb_s2.exe" /pdbtype:sept 
+".\Debug\T380Demo_DVB_S2.obj"
+".\Debug\UTIL.obj"
+"..\..\APPL\TSPHLD0381.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13A.tmp"
+<h3>Output Window</h3>
+Compiling...
+T380Demo_DVB_S2.c
+UTIL.c
+Linking...
+
+
+
+<h3>Results</h3>
+hld_mod_dvb_s2.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: TVB390_DVB_T - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13C.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D LOOP_ADAPT=1 /D "TVB390V8" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TVB390_DVB_T.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\T380Demo_DVB_T.c"
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\UTIL.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13C.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13D.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/hld_mod_dvb_t.pdb" /debug /machine:I386 /out:"../../APPL/hld_mod_dvb_t.exe" /pdbtype:sept 
+".\Debug\T380Demo_DVB_T.obj"
+".\Debug\UTIL.obj"
+"..\..\APPL\TSPHLD0381.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13D.tmp"
+<h3>Output Window</h3>
+Compiling...
+T380Demo_DVB_T.c
+UTIL.c
+Linking...
+
+
+
+<h3>Results</h3>
+hld_mod_dvb_t.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: TVB390_ISDB_T - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13F.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D LOOP_ADAPT=1 /D "TVB390V8" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TVB390_ISDB_T.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\T380Demo_ISDB_T.c"
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\UTIL.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP13F.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP140.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/hld_mod_isdb_t.pdb" /debug /machine:I386 /out:"../../APPL/hld_mod_isdb_t.exe" /pdbtype:sept 
+".\Debug\T380Demo_ISDB_T.obj"
+".\Debug\UTIL.obj"
+"..\..\APPL\TSPHLD0381.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP140.tmp"
+<h3>Output Window</h3>
+Compiling...
+T380Demo_ISDB_T.c
+UTIL.c
+Linking...
+
+
+
+<h3>Results</h3>
+hld_mod_isdb_t.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: TVB390_QAM_A - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP142.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D LOOP_ADAPT=1 /D "TVB390V8" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TVB390_QAM_A.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\T380Demo_QAM_A.c"
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\UTIL.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP142.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP143.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/hld_mod_qam_a.pdb" /debug /machine:I386 /out:"../../APPL/hld_mod_qam_a.exe" /pdbtype:sept 
+".\Debug\T380Demo_QAM_A.obj"
+".\Debug\UTIL.obj"
+"..\..\APPL\TSPHLD0381.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP143.tmp"
+<h3>Output Window</h3>
+Compiling...
+T380Demo_QAM_A.c
+UTIL.c
+Linking...
+
+
+
+<h3>Results</h3>
+hld_mod_qam_a.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: TVB390_QAM_B - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP145.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D LOOP_ADAPT=1 /D "TVB390V8" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TVB390_QAM_B.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\T380Demo_QAM_B.c"
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\UTIL.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP145.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP146.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/hld_mod_qam_b.pdb" /debug /machine:I386 /out:"../../APPL/hld_mod_qam_b.exe" /pdbtype:sept 
+".\Debug\T380Demo_QAM_B.obj"
+".\Debug\UTIL.obj"
+"..\..\APPL\TSPHLD0381.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP146.tmp"
+<h3>Output Window</h3>
+Compiling...
+T380Demo_QAM_B.c
+UTIL.c
+Linking...
+
+
+
+<h3>Results</h3>
+hld_mod_qam_b.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: TVB390_QPSK - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP148.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D LOOP_ADAPT=1 /D "TVB390V8" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TVB390_QPSK.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\T380Demo_QPSK.c"
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\UTIL.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP148.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP149.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/hld_mod_qpsk.pdb" /debug /machine:I386 /out:"../../APPL/hld_mod_qpsk.exe" /pdbtype:sept 
+".\Debug\T380Demo_QPSK.obj"
+".\Debug\UTIL.obj"
+"..\..\APPL\TSPHLD0381.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP149.tmp"
+<h3>Output Window</h3>
+Compiling...
+T380Demo_QPSK.c
+UTIL.c
+Linking...
+
+
+
+<h3>Results</h3>
+hld_mod_qpsk.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: TVB390_TDMB - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14B.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "TVB390V8" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/TVB390_TDMB.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\T380Demo_TDMB.c"
+"D:\20091026_TPG0590E(v6.10.06)_CD\SDK\HLD_DEMO\UTIL.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14B.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14C.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/hld_mod_tdmb.pdb" /debug /machine:I386 /out:"../../APPL/hld_mod_tdmb.exe" /pdbtype:sept 
+".\Debug\T380Demo_TDMB.obj"
+".\Debug\UTIL.obj"
+"..\..\APPL\TSPHLD0381.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14C.tmp"
+<h3>Output Window</h3>
+Compiling...
+T380Demo_TDMB.c
+UTIL.c
+Linking...
+
+
+
+<h3>Results</h3>
+hld_mod_tdmb.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
