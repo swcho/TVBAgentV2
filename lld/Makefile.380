@@ -1,0 +1,35 @@
+# Search Linux Header First
+
+CFLAGS = -g 
+CFLAGS += -DTVB380V4
+CFLAGS += -DPLX_LINUX
+
+OBJS = tsplld0381.o
+all: $(OBJS)
+
+tsplld0381.o: lldmain.o dma_drv.o wdm_drv.o playcapt.o tvb360u.o ds2401_util.o init_rs.o decode_rs.o decode_cif.o
+	ld -r -o tsplld0381.o lldmain.o dma_drv.o wdm_drv.o playcapt.o tvb360u.o ds2401_util.o init_rs.o decode_rs.o decode_cif.o PlxApi.a
+
+lldmain.o: lldmain.c ../tsp100.h ../include/lld_def.h ../include/logfile.h wdm_drv.h dma_drv.h PlxApi.h
+
+dma_drv.o: dma_drv.c ../tsp100.h ../include/lld_def.h ../include/logfile.h wdm_drv.h dma_drv.h
+
+wdm_drv.o: wdm_drv.c ../tsp100.h ../include/lld_def.h ../include/logfile.h wdm_drv.h dma_drv.h
+
+playcat.o: playcapt.c ../tsp100.h ../include/lld_def.h ../include/logfile.h wdm_drv.h dma_drv.h
+
+tvb360u.o: tvb360u.c ../tsp100.h ../include/lld_def.h ../include/logfile.h wdm_drv.h dma_drv.h
+
+ds2401_util.o: ds2401_util.c
+
+init_rs.o: init_rs.c
+
+decode_rs.o: decode_rs.c
+
+decode_cif.o: decode_cif.c
+
+tar: clean
+	tar -czf TSP.tgz *.c *.h tsp_* Makefile
+
+clean:
+	rm -f *.o *~ core test p

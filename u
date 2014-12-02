@@ -1,0 +1,40 @@
+#!/bin/sh
+
+myparam=$1
+case "$myparam" in
+   102) module="tsp102";;
+   140) module="tvb140";;
+   150) module="tqk150";;
+   160) module="tom160";;
+   360) module="tvb360";;
+   380) module="tvb380v4";;
+   390) module="tvb380v4";;
+   590) module="tvb380v4";;
+   370) module="tvb370v6";;
+   110) module="tse110v1";;
+esac
+
+if [ $# = 0 ]; then
+   echo "    USAGE: ./u 102|140|150|160|360|380|390|590|370|110"
+   exit 0
+else
+   echo Removing $module
+fi
+
+device=$module
+
+# invoke rmmod with all arguments we got
+/sbin/rmmod $module || exit 1
+
+# Remove stale nodes
+
+rm -f /dev/${device}
+rm -f /dev/${device}-1
+rm -f /dev/${device}-2
+rm -f /dev/${device}-3
+rm -f /dev/${device}-4
+rm -f /dev/${device}-5
+rm -f /dev/${device}-6
+rm -f /dev/${device}-7
+rm -f /dev/${device}-8
+

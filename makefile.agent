@@ -1,0 +1,111 @@
+#KERNEL_LOCATION := /lib/modules/$(shell uname -r)/build
+#KERNEL_VERSION_CODE := $(shell awk '/LINUX_VERSION_CODE/ {print $$3}' ${KERNEL_LOCATION}/include/linux/version.h)
+#MODULE_NAME := tvb380v4
+
+#CC=arm-linux-g++
+#CXX=arm-linux-g++
+CC=g++
+CXX=g++
+
+##Test if the kernel if older than 2.5.51
+#ifeq ($(shell expr ${KERNEL_VERSION_CODE} '<=' 132403),1)
+#MODULES := $(MODULE_NAME).o
+#else
+#MODULES := $(MODULE_NAME).ko
+#endif
+
+#---------- TVB380
+#EXTRA_CFLAGS += -DTVB380
+
+#---------- TVB370V6
+#EXTRA_CFLAGS += -DTVB370V6
+
+#---------- TSE110
+#EXTRA_CFLAGS += -DTSE110V1
+EXTRA_CFLAGS += -I./include -I../interface/lnx -I.
+
+#---------- TVB390, TVB590(E,S), TVB595, TVB597A
+EXTRA_CFLAGS += -DTVB380V4 -DTVB390V8
+#---------- (additional) TVB595, TVB597A
+EXTRA_CFLAGS += -DTVB595V1
+#EXTRA_CFLAGS += -DSTANDALONE
+
+SOURCEFILES = TVB595Lan.cpp  \
+		mainutil.cpp    \
+		util_ind.cpp      \
+		wrapdll.cpp \
+		reg_var.cpp     \
+		util_dep.cpp     \
+		msg_btw_mdls.cpp     \
+
+OBJSS = $(patsubst %.c, %.o, $(patsubst %.cpp, %.o, $(SOURCEFILES)))
+
+
+#all: tvbagent mod_qam_b
+all: tvbagent 
+tvbagent: $(OBJSS)
+	$(CC) $(EXTRA_CFLAGS) -g -o tvbagent $(OBJSS) -ltsphld0381 -lm -lpthread -ldl
+
+TVB595Lan.o: 
+	$(CC) $(EXTRA_CFLAGS) -c -o TVB595Lan.o TVB595Lan.cpp
+
+mainutil.o: 
+	$(CC) $(EXTRA_CFLAGS) -c -o mainutil.o mainutil.cpp
+
+util_ind.o: 
+	$(CC) $(EXTRA_CFLAGS) -c -o util_ind.o util_ind.cpp
+
+wrapdll.o: 
+	$(CC) $(EXTRA_CFLAGS) -c -o wrapdll.o wrapdll.cpp
+
+reg_var.o: 
+	$(CC) $(EXTRA_CFLAGS) -c -o reg_var.o reg_var.cpp
+
+util_dep.o: 
+	$(CC) $(EXTRA_CFLAGS) -c -o util_dep.o util_dep.cpp
+
+msg_btw_mdls.o: 
+	$(CC) $(EXTRA_CFLAGS) -c -o msg_btw_mdls.o ../interface/lnx/msg_btw_mdls.cpp
+
+
+#########################################################################
+#########################################################################
+#mod_dvb_t: util.c src_demo/T380Demo_DVB_T.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_dvb_t util.c src_demo/T380Demo_DVB_T.c -L./tlib -ltsphld0381 -lm -lpthread -ldl
+
+#mod_vsb: util.c src_demo/T380Demo_VSB.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_vsb util.c src_demo/T380Demo_VSB.c -L./tlib -ltsphld0381 -lm -lpthread -ldl
+
+#mod_qam_a: util.c src_demo/T380Demo_QAM_A.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_qam_a util.c src_demo/T380Demo_QAM_A.c -L./tlib -ltsphld0381 -lm -lpthread -ldl
+
+#mod_qam_b: util.c src_demo/T380Demo_QAM_B.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_qam_b util.c src_demo/T380Demo_QAM_B.c -L. -L./tlib -ltsphld0381 -lm -lpthread -ldl
+
+#mod_qpsk: util.c src_demo/T380Demo_QPSK.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_qpsk util.c src_demo/T380Demo_QPSK.c -L./tlib -ltsphld0381 -lm -lpthread -ldl
+
+#mod_tdmb: util.c src_demo/T380Demo_TDMB.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_tdmb util.c src_demo/T380Demo_TDMB.c -L./tlib -ltsphld0381 -lm -lpthread -ldl
+
+#mod_16vsb: util.c src_demo/T380Demo_16VSB.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_16vsb util.c src_demo/T380Demo_16VSB.c -L./tlib -ltsphld0381 -lm -lpthread -ldl
+
+#mod_dvb_h: util.c src_demo/T380Demo_DVB_H.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_dvb_h util.c src_demo/T380Demo_DVB_H.c -L./tlib -ltsphld0381 -lm -lpthread -ldl
+
+#mod_dvb_s2: util.c src_demo/T380Demo_DVB_S2.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_dvb_s2 util.c src_demo/T380Demo_DVB_S2.c -L./tlib -ltsphld0381 -lm -lpthread -ldl
+
+#mod_isdb_t: util.c src_demo/T380Demo_ISDB_T.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_isdb_t util.c src_demo/T380Demo_ISDB_T.c -L./tlib -ltsphld0381 -lm -lpthread -ldl
+
+#mod_dtmb: util.c src_demo/T380Demo_DTMB.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_dtmb util.c src_demo/T380Demo_DTMB.c -L./tlib -ltsphld0381 -lm -lpthread -ldl
+
+#mod_cmmb: util.c src_demo/T380Demo_CMMB.c include/lld_def.h include/hld_def.h
+#	$(CC) $(EXTRA_CFLAGS) -g -o mod_cmmb util.c src_demo/T380Demo_CMMB.c -L./tlib -ltsphld0381 -lm -lpthread -ldl
+	
+clean:
+	-rm -f p380* p390* mod_* tvbagent lld_tse110 *.o *.odb *.mon *.shm *~core
+

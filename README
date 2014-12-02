@@ -1,0 +1,152 @@
+Linux Software Guide for TSP Boards
+
+1. Introduction
+- This package cantains the linux device driver and application for  TSP/TVB Boards
+- Compiled and tested under the Red Hat Fedora(2.6.9.???),
+
+2. How to use sample programs
+
+(TSP102 board)
+1. make driver, low level dll, sample application
+* make all 
+* output : tsp102.o p102 r102 ./lld/tsplld0421.o 
+2. load tsp102 driver (root privilege required)
+* ./l 102
+3. play or record stream
+* ./p102 streamfile 19392658 1
+* ./r102 capturefile 310M|ASI 1
+4. unload driver (root privilege required)
+* ./u 102
+
+(Tvb140/Tqk150/Tom160 board)
+1. make driver, low level dll, sample application
+* make all 
+* output : tvb140.o/tqk150.o/tom160.o 
+p140/p150/p160
+t140/t150/t160
+./lld/tsplld042x.o
+./t??tune/t??_tune.o
+2. load driver (root privilege required)
+* ./l 140/150/160
+3. play or record stream using p140/p150/160 or t140/t150/t160
+* /p140 streams 19392658 1
+* t140 freq capturefile
+4. unload driver (root privilege required)
+* ./u 140/150/160
+
+(Tvb360 board)
+1. make driver, low level dll, sample application
+* make all 
+* output : tvb360.o p360 ./lld/tsplld0425.o 
+2. load tvb360 driver (root privilege required)
+* ./l 360
+3. set modulator parameter
+* ./p360 modulation_mode input freq symbol coding mode
+4. unload driver (root privilege required)
+* ./u 360
+
+(Tvb380 board)
+1. make driver, low level dll, sample application
+* make all
+* output : tvb380v4.o(ko) mod_??? ./lld/tsplld0381.o
+2. load tvb380 driver (root privilege required)
+* ./l 380
+3. set play/modulator parameter
+* ./mod_?????
+4. unload driver (root privilege required)
+* ./u 380
+5. If you have new TVB380(Revision #3), check the following CFLAG must be included at Makefile.
+	...
+	EXTRA_CFLAGS += -DTVB380
+	EXTRA_CFLAGS += -DTVB390V8
+
+(Tvb390 board)
+1. make driver, low level dll, sample application
+* make all
+* output : tvb380v4.o(ko) mod_??? ./lld/tsplld0381.o
+2. load tvb390 driver (root privilege required)
+* ./l 390
+3. set play/modulator parameter
+* ./mod_????? 
+4. unload driver (root privilege required)
+* ./u 390
+5. If you have new TVB390V7, check the following CFLAG must be included at Makefile.
+	...
+	EXTRA_CFLAGS += -DTVB380V4
+	EXTRA_CFLAGS += -DTVB390V8
+
+(Tvb590 board)
+0. If one uses TVB590 boards, follow this procedures instead of the above Tvb390 case
+
+1. make driver, low level dll, sample application
+* make all
+* output : tvb380v4.o(ko) mod_??? ./lld/tsplld0381.o
+2. load tvb390 driver (root privilege required)
+* ./l 590
+3. set play/modulator parameter
+* ./mod_?????
+4. unload driver (root privilege required)
+* ./u 590
+5. If you have new TVB590(TVB390V8 or higher), check the following EXTRA_CFLAGS is included at Makefile.
+        ...
+        EXTRA_CFLAGS += -DTVB380V4
+        EXTRA_CFLAGS += -DTVB390V8
+
+        And comment the following line if it is neither TVB595 nor TVB597A.
+        #EXTRA_CFLAGS += -DTVB595V1
+	
+And, uncomment only the line "(cd ./lld; make -f Makefile.380 clean; make -f Makefile.380)" for lld build.
+
+(Tvb595/Tvb597A board)
+0. No driver load/unload procedure is not needed, but usb host management is supported by "libusb-0.1.12" tools.
+1. If you have new TVB595, check the following CFLAG must be included at Makefile.
+        ...
+        EXTRA_CFLAGS += -DTVB380V4
+        EXTRA_CFLAGS += -DTVB390V8
+        EXTRA_CFLAGS += -DTVB595V1
+
+And, uncomment only the line "(cd ./lld; make -f Makefile.595 clean; make -f Makefile.595)" for lld build.
+
+(Tvb590E board)
+0. If PCI-express performance is too low, before both loading device driver and building application, 
+1. Run ./p .
+2. It will create and install a helper library and a service driver for TVB590E performance.
+
+(Tvb370 board)
+1. make driver, low level dll, sample application
+* make all
+* output : tvb370v6.o(ko) p390_??? ./lld/tsplld0381.o
+2. load tvb370 driver (root privilege required)
+* ./l 370
+3. set play/modulator parameters
+* ./p390_vsb
+4. unload driver (root privilege required)
+* ./u 370
+
+5. If you have new TVB370/8VSB, check the following EXTRA_CFLAGS is included at Makefile.
+	...
+	EXTRA_CFLAGS += -DTVB370V6
+
+6. If you have new TVB370/IF, check the following EXTRA_CFLAGS is included at Makefile.
+	...
+	EXTRA_CFLAGS += -DTVB370V6	
+	EXTRA_CFLAGS += -DTVB390V8
+
+And, uncomment only the line "(cd ./lld; make -f Makefile.370 clean; make -f Makefile.370)" for lld build.
+
+(Tse110 board)
+1. make driver, low level dll, sample application
+* make all
+* output : tse110v1.o(ko) lld_ ./lld/tsplld0431.o
+2. load tse110 driver (root privilege required)
+* ./l 110
+3. set play/record parameters
+* ./lld_tse110
+4. unload driver (root privilege required)
+* ./u 110
+
+5. Check the following EXTRA_CFLAGS is included at Makefile.
+	...
+	EXTRA_CFLAGS += -DTSE110V1
+
+And, uncomment only the line "(cd ./lld; make -f Makefile.110 clean; make -f Makefile.110)" for lld build.

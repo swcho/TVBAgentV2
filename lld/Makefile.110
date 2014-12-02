@@ -1,0 +1,31 @@
+# Search Linux Header First
+
+CFLAGS = -DTSE110V1 -g
+
+OBJS = tsplld0431.o
+all: $(OBJS)
+
+tsplld0431.o: lldmain.o dma_drv.o wdm_drv.o playcapt.o tvb360u.o ds2401_util.o init_rs.o decode_rs.o
+	ld -r -o tsplld0431.o lldmain.o dma_drv.o wdm_drv.o playcapt.o tvb360u.o ds2401_util.o init_rs.o decode_rs.o
+
+lldmain.o: lldmain.c ../tsp100.h ../include/lld_def.h ../include/logfile.h wdm_drv.h dma_drv.h
+
+dma_drv.o: dma_drv.c ../tsp100.h ../include/lld_def.h ../include/logfile.h wdm_drv.h dma_drv.h
+
+wdm_drv.o: wdm_drv.c ../tsp100.h ../include/lld_def.h ../include/logfile.h wdm_drv.h dma_drv.h
+
+playcat.o: playcapt.c ../tsp100.h ../include/lld_def.h ../include/logfile.h wdm_drv.h dma_drv.h
+
+tvb360u.o: tvb360u.c ../tsp100.h ../include/lld_def.h ../include/logfile.h wdm_drv.h dma_drv.h
+
+ds2401_util.o: ds2401_util.c
+
+init_rs.o: init_rs.c
+
+decode_rs.o: decode_rs.c
+
+tar: clean
+	tar -czf TSP.tgz *.c *.h tsp_* Makefile
+
+clean:
+	rm -f *.o *~ core test p

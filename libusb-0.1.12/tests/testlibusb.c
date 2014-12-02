@@ -1,0 +1,17 @@
+////////////////////////////////////////////////////////////////
+//
+// This is an application on Linux USB.
+// 
+// 
+// Copyright (c) 2008 TELEVIEW, http://www.teleview.com
+// 
+////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+int main(int argc, char **argv)
+{
+	printf("\n TEST.......\n");
+	return 0;
+}
+
+

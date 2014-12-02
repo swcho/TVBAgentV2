@@ -1,0 +1,181 @@
+//=================================================================	
+//	mainmode.h
+//
+//	Copyright (C) 2007
+//	Teleview Corporation
+//
+//	Author : 
+//  	Last Modified : 27 March. 2006
+//=================================================================	
+
+#ifndef	__TLV_MAINMODE_DEF_
+#define	__TLV_MAINMODE_DEF_
+
+enum TVBxxx_BOARD_HW_FEATURE
+{
+	HW_AD9852_AST = 0,
+	HW_AD9852_ASV = 1,
+	HW_HMC1033_988 = 2,
+};
+
+enum TLV_MODULATOR_TYPE
+{
+	TVB380_DVBT_MODE =	0,
+	TVB380_VSB8_MODE,
+	TVB380_QAMA_MODE,
+	TVB380_QAMB_MODE,
+	TVB380_QPSK_MODE,
+	TVB380_TDMB_MODE,
+	TVB380_VSB16_MODE,
+	TVB380_DVBH_MODE,
+	TVB380_DVBS2_MODE,
+	TVB380_ISDBT_MODE,
+	TVB380_ISDBT_13_MODE,
+	TVB380_DTMB_MODE,
+	TVB380_CMMB_MODE,
+	TVB380_DVBT2_MODE,
+	TVB380_RESERVED_O_MODE,
+	TVB380_ATSC_MH_MODE,
+	TVB380_IQ_PLAY_MODE = 16,
+	//ISDB-S
+	TVB380_ISDBS_MODE,
+	TVB380_DVBC2_MODE,
+	//2012/4/9 Multiple option
+	TVB380_MULTI_QAMB_MODE,
+	TVB380_MULTI_VSB_MODE,
+	//2012/6/27 Multiple DVB-T
+	TVB380_MULTI_DVBT_MODE,
+
+	TVB380_TSIO_MODE,
+	TLV_MODULATOR_TYPE_MAX
+};
+
+enum TLV_DVB_T_BANDWIDTH
+{
+	DVB_T_6M_BAND =	0,
+	DVB_T_7M_BAND,
+	DVB_T_8M_BAND,
+	DVB_T_5M_BAND,
+	DVB_T_1_7M_BAND,
+	DVB_T_10M_BAND,
+	TLV_DVB_T_BANDWIDTH_MAX
+};
+
+enum TLV_DVB_S2_ROLL_OFF_FACTOR
+{
+	ROLL_OFF_FACTOR_020 = 0,
+    ROLL_OFF_FACTOR_025,
+    ROLL_OFF_FACTOR_035,
+    ROLL_OFF_FACTOR_NONE,
+    TLV_DVB_S2_ROLL_OFF_MAX
+};
+
+enum TLV_CONTROL_ERROR_CODE
+{
+	TLV_NO_FAIL = 0,
+	TLV_FAIL_TO_FIND_DEVICE,
+	TLV_FAIL_TO_FIND_BOARD_INFO,
+	TLV_FAIL_TO_FIND_FW_FILE,
+	TLV_FAIL_TO_DOWNLOAD_FW,
+	TLV_FAIL_TO_TEST_FW,
+	TLV_FAIL_TO_TEST_PCI,
+	TLV_FAIL_TO_CONFIRM_LN,
+	TLV_FAIL_TO_ALLOC_DMA_MEMORY,
+    TLV_FAIL_TO_FIND_MOD_TYPE,
+	TLV_FAIL_TO_LOAD_LLD = 50,//HLD
+};
+
+//sskim20081010 - DTMB
+enum TLV_DTMB_CONTELLATION
+{
+    CONST_DTMB_4QAM_NR = 0,
+    CONST_DTMB_4QAM,
+    CONST_DTMB_16QAM,
+    CONST_DTMB_32QAM,
+    CONST_DTMB_64QAM,
+    CONST_DTMB_MAX,
+};
+        
+enum TLV_DTMB_CODERATE
+{
+    CONST_DTMB_CODE_7488_3008 = 0,
+    CONST_DTMB_CODE_7488_4512,
+    CONST_DTMB_CODE_7488_6016,
+    CONST_DTMB_CODE_MAX,
+};
+        
+enum TLV_DTMB_INTERLEAVE
+{
+    CONST_DTMB_INTERLEAVE_0 = 0,
+    CONST_DTMB_INTERLEAVE_1,
+    CONST_DTMB_INTERLEAVE_MAX,
+};
+                
+enum TLV_DTMB_FRAME_HEADER
+{
+    CONST_DTMB_FRAME_HEADER_MODE_1 = 0,
+    CONST_DTMB_FRAME_HEADER_MODE_2,
+    CONST_DTMB_FRAME_HEADER_MODE_3,
+    CONST_DTMB_FRAME_HEADER_MODE_MAX,
+};
+        
+enum TLV_DTMB_CARRIER_NUMBER
+{
+    CONST_DTMB_CARRIER_NUMBER_0 = 0,
+    CONST_DTMB_CARRIER_NUMBER_1,
+    CONST_DTMB_CARRIER_NUMBER_MAX,
+};
+
+enum TLV_DTMB_FRAME_HEADER_PN
+{
+    CONST_DTMB_FRAME_HEADER_PN_FIXED = 0,
+    CONST_DTMB_FRAME_HEADER_PN_ROTATED,
+    CONST_DTMB_FRAME_HEADER_PN_MAX,
+};
+
+enum TLV_DTMB_PILOT_INSERTION
+{
+	CONST_DTMB_PILOT_INSERTION_OFF = 0,
+	CONST_DTMB_PILOT_INSERTION_ON,
+	CONST_DTMB_PILOT_INSERTION_MAX,
+};
+
+//=================================================================	
+#ifdef WIN32
+#define DLL_EXPORT	extern "C" _declspec(dllexport)
+#define CHK_DEV(a) (a != NULL)
+
+//	extern	HANDLE	hDevice;
+
+//=================================================================	
+// Linux
+#else
+
+#define DLL_EXPORT
+#define _stdcall
+#define CHK_DEV(a) (a >= 0)
+#define WaitForSingleObject(a,b)
+#define ReleaseMutex(a);
+
+//2010/9/30 PCI/USB MULTIBOARD
+#if 0
+
+#if defined(TVB595V1)
+extern struct usb_dev_handle *hDevice;
+#else
+extern int hDevice;
+#endif
+
+#else
+
+//	extern struct usb_dev_handle *hDevice_use;
+//	extern int hDevice;
+
+#endif
+
+#endif
+
+// TVB595V1
+extern int CHK_ID(int id, ...);
+
+#endif

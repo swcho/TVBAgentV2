@@ -1,0 +1,161 @@
+tvb4961_lld.o tvb4961_lld.o: tvb4961_lld.c \
+  /usr/tools/mipsel-linux/include/string.h \
+  /usr/tools/mipsel-linux/include/features.h \
+  /usr/tools/mipsel-linux/include/sys/cdefs.h \
+  /usr/tools/mipsel-linux/include/gnu/stubs.h \
+  /usr/tools/mipsel-linux/include/bits/symver.h \
+  /usr/tools/mipsel-linux/include/bits/symverinfo.h \
+  /usr/tools/lib/gcc-lib/mipsel-linux/2.96/include/stddef.h \
+  /usr/tools/mipsel-linux/include/bits/string.h \
+  /usr/tools/mipsel-linux/include/bits/string2.h \
+  /usr/tools/mipsel-linux/include/stdlib.h \
+  /usr/tools/mipsel-linux/include/unistd.h \
+  /usr/tools/mipsel-linux/include/bits/posix_opt.h \
+  /usr/tools/mipsel-linux/include/bits/types.h \
+  /usr/tools/mipsel-linux/include/bits/pthreadtypes.h \
+  /usr/tools/mipsel-linux/include/bits/sched.h \
+  /usr/tools/mipsel-linux/include/bits/confname.h \
+  /usr/tools/mipsel-linux/include/getopt.h \
+  /usr/tools/mipsel-linux/include/math.h \
+  /usr/tools/mipsel-linux/include/bits/huge_val.h \
+  /usr/tools/mipsel-linux/include/bits/mathdef.h \
+  /usr/tools/mipsel-linux/include/bits/mathcalls.h \
+  /usr/tools/mipsel-linux/include/bits/mathinline.h tvb4961_lld.h \
+  /usr/tools/mipsel-linux/include/sys/types.h \
+  /usr/tools/mipsel-linux/include/time.h \
+  /usr/tools/mipsel-linux/include/endian.h \
+  /usr/tools/mipsel-linux/include/bits/endian.h \
+  /usr/tools/mipsel-linux/include/sys/select.h \
+  /usr/tools/mipsel-linux/include/bits/select.h \
+  /usr/tools/mipsel-linux/include/bits/sigset.h \
+  /usr/tools/mipsel-linux/include/bits/time.h \
+  /usr/tools/mipsel-linux/include/sys/sysmacros.h \
+  /usr/tools/mipsel-linux/include/alloca.h \
+  /usr/tools/mipsel-linux/include/stdio.h \
+  /usr/tools/mipsel-linux/include/libio.h \
+  /usr/tools/mipsel-linux/include/_G_config.h \
+  /usr/tools/mipsel-linux/include/wchar.h \
+  /usr/tools/mipsel-linux/include/bits/wchar.h \
+  /usr/tools/mipsel-linux/include/gconv.h \
+  /usr/tools/lib/gcc-lib/mipsel-linux/2.96/include/stdarg.h \
+  /usr/tools/mipsel-linux/include/bits/stdio_lim.h \
+  /usr/tools/mipsel-linux/include/bits/stdio.h common_lld.h NcRemotePci.h \
+  ../usb.h /usr/tools/lib/gcc-lib/mipsel-linux/2.96/include/limits.h \
+  /usr/tools/lib/gcc-lib/mipsel-linux/2.96/include/syslimits.h \
+  /usr/tools/mipsel-linux/include/limits.h \
+  /usr/tools/mipsel-linux/include/bits/posix1_lim.h \
+  /usr/tools/mipsel-linux/include/bits/local_lim.h \
+  /usr/tools/mipsel-linux/include/linux/limits.h \
+  /usr/tools/mipsel-linux/include/bits/posix2_lim.h \
+  /usr/tools/mipsel-linux/include/dirent.h \
+  /usr/tools/mipsel-linux/include/bits/dirent.h Net2282.h
+
+/usr/tools/mipsel-linux/include/string.h:
+
+/usr/tools/mipsel-linux/include/features.h:
+
+/usr/tools/mipsel-linux/include/sys/cdefs.h:
+
+/usr/tools/mipsel-linux/include/gnu/stubs.h:
+
+/usr/tools/mipsel-linux/include/bits/symver.h:
+
+/usr/tools/mipsel-linux/include/bits/symverinfo.h:
+
+/usr/tools/lib/gcc-lib/mipsel-linux/2.96/include/stddef.h:
+
+/usr/tools/mipsel-linux/include/bits/string.h:
+
+/usr/tools/mipsel-linux/include/bits/string2.h:
+
+/usr/tools/mipsel-linux/include/stdlib.h:
+
+/usr/tools/mipsel-linux/include/unistd.h:
+
+/usr/tools/mipsel-linux/include/bits/posix_opt.h:
+
+/usr/tools/mipsel-linux/include/bits/types.h:
+
+/usr/tools/mipsel-linux/include/bits/pthreadtypes.h:
+
+/usr/tools/mipsel-linux/include/bits/sched.h:
+
+/usr/tools/mipsel-linux/include/bits/confname.h:
+
+/usr/tools/mipsel-linux/include/getopt.h:
+
+/usr/tools/mipsel-linux/include/math.h:
+
+/usr/tools/mipsel-linux/include/bits/huge_val.h:
+
+/usr/tools/mipsel-linux/include/bits/mathdef.h:
+
+/usr/tools/mipsel-linux/include/bits/mathcalls.h:
+
+/usr/tools/mipsel-linux/include/bits/mathinline.h:
+
+tvb4961_lld.h:
+
+/usr/tools/mipsel-linux/include/sys/types.h:
+
+/usr/tools/mipsel-linux/include/time.h:
+
+/usr/tools/mipsel-linux/include/endian.h:
+
+/usr/tools/mipsel-linux/include/bits/endian.h:
+
+/usr/tools/mipsel-linux/include/sys/select.h:
+
+/usr/tools/mipsel-linux/include/bits/select.h:
+
+/usr/tools/mipsel-linux/include/bits/sigset.h:
+
+/usr/tools/mipsel-linux/include/bits/time.h:
+
+/usr/tools/mipsel-linux/include/sys/sysmacros.h:
+
+/usr/tools/mipsel-linux/include/alloca.h:
+
+/usr/tools/mipsel-linux/include/stdio.h:
+
+/usr/tools/mipsel-linux/include/libio.h:
+
+/usr/tools/mipsel-linux/include/_G_config.h:
+
+/usr/tools/mipsel-linux/include/wchar.h:
+
+/usr/tools/mipsel-linux/include/bits/wchar.h:
+
+/usr/tools/mipsel-linux/include/gconv.h:
+
+/usr/tools/lib/gcc-lib/mipsel-linux/2.96/include/stdarg.h:
+
+/usr/tools/mipsel-linux/include/bits/stdio_lim.h:
+
+/usr/tools/mipsel-linux/include/bits/stdio.h:
+
+common_lld.h:
+
+NcRemotePci.h:
+
+../usb.h:
+
+/usr/tools/lib/gcc-lib/mipsel-linux/2.96/include/limits.h:
+
+/usr/tools/lib/gcc-lib/mipsel-linux/2.96/include/syslimits.h:
+
+/usr/tools/mipsel-linux/include/limits.h:
+
+/usr/tools/mipsel-linux/include/bits/posix1_lim.h:
+
+/usr/tools/mipsel-linux/include/bits/local_lim.h:
+
+/usr/tools/mipsel-linux/include/linux/limits.h:
+
+/usr/tools/mipsel-linux/include/bits/posix2_lim.h:
+
+/usr/tools/mipsel-linux/include/dirent.h:
+
+/usr/tools/mipsel-linux/include/bits/dirent.h:
+
+Net2282.h:
